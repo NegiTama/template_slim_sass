@@ -35,7 +35,9 @@ gulp.task('slim', function() {
   return gulp.src('slim/*.slim')
     .pipe(plumber())
     .pipe(slim({
-      pretty: true
+      pretty: true,
+      require: 'slim/include',
+      options: 'include_dirs=["slim/inc"]'
     }))
     .pipe(gulp.dest('./'))
 });
@@ -43,7 +45,7 @@ gulp.task('slim', function() {
 // watch
 gulp.task('watch', () => {
   gulp.watch('css/*.sass', gulp.task('style'));
-  gulp.watch('slim/*.slim', gulp.task('slim'));
+  gulp.watch(['slim/*.slim', 'slim/inc/*slim'], gulp.task('slim'));
 });
 
 gulp.task('default', gulp.parallel('watch'));
