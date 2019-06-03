@@ -45,7 +45,7 @@ gulp.task('slim', function() {
 // watch
 gulp.task('watch', () => {
   gulp.watch('css/*.sass', gulp.task('style'));
-  gulp.watch(['slim/*.slim', 'slim/inc/*slim'], gulp.task('slim'));
+  gulp.watch(['slim/*.slim', 'slim/inc/*.slim'], gulp.task('slim'));
 });
 
 gulp.task('default', gulp.parallel('watch'));
