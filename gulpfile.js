@@ -13,7 +13,7 @@ gulp.task("style", function() {
       // Sassのコンパイルを実行
       .pipe(
         sass({
-          outputStyle: "compressed"
+          outputStyle: "expanded"
         })
       )
       .pipe(postcss([
