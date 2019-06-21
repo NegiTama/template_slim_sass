@@ -36,7 +36,7 @@ gulp.task('slim', function() {
       require: 'slim/include',
       options: 'include_dirs=["src/slim/inc"]'
     }))
-    .pipe(gulp.dest('./'))
+    .pipe(gulp.dest('dist'))
 });
 
 // watch

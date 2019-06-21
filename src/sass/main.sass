@@ -2,16 +2,349 @@
 @import mixin
 @import scheme
 
+.Header
+  background-color: $blue
+  padding: 20px 0
+  &__logo-sub
+    color: $white
+    margin-bottom: 10px
+    font-size: 10px
+  &__logo-img
 
-.sp-block
-  display: block
-.sp-ib
-  display: inline-block
-.sp-flex
+.Kv
+  &__img
+    width: 100%
+    height: auto
+
+.Step
+  margin: 70px 0 30px
+  text-align: center
+  &__intro-text
+    font-size: 22px
+    font-weight: bold
+    margin-bottom: 44px
+  &__condition-text,
+  &__target-text
+    font-size: 21px
+    line-height: 1.7619047619047619
+    margin-bottom: 40px
+  &__target-text
+    margin: 0 -70px
+
+.Ribon
+  padding: 18px
+  width: 864px
+  background-color: $green
+  color: $white
+  font-size: 21px
+  position: relative
+  margin: 0 auto 40px
+  &::before,
+  &::after
+    position: absolute
+    top: 0
+    content: ''
+    display: block
+    border-style: solid
+  &::before
+    left: 0
+    border-width: 28px 0px 28px 17px
+    border-color: transparent transparent transparent #fff
+  &::after
+    top: 0
+    right: 0
+    border-width: 28px 17px 28px 0px
+    border-color: transparent #fff transparent transparent
+
+  &__deco
+    background-color: $white
+    +radius(1000px)
+    padding: 0px 16px 1px
+    font-size: 17px
+    color: $green
+    margin-right: 10px
+
+.Step3
   display: -webkit-flex
   display: -ms-flex
   display: flex
-.sp-none
+  justify-content: space-between
+  align-items: stretch
+  margin: 100px auto
+  &__box
+    text-align: center
+    border: 4px solid $black
+    background-color: $sun_orange
+    +radius(23px)
+    padding: 10px
+    width: 228px
+    position: relative
+  &__icon
+    &-num
+      width: 54px
+      height: 54px
+    &-card
+      width: 125px
+      height: 85px
+      margin: 30px auto
+    &-money
+      width: 114px
+      height: 66px
+      margin: 34px
+    &-present
+      width: 86px
+      height: 88px
+      margin: 10px 0 2px
+    &-arrow
+      width: 21px
+      height: 47px
+  &__arrow
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    align-items: center
+  &__text
+    font-size: 15px
+  &__brackets
+    font-size: 12px
+    position: relative
+    &::before,
+    &::after
+      content: ')'
+      display: block
+      position: absolute
+      top: 0
+      font-size: 57px
+    &::before
+      left: 0
+      content: '('
+    &::after
+      right: 0
+  &__mail-text
+    font-size: 12px
+    position: absolute
+    right: 0
+    left: 0
+    bottom: -66px
+    margin: auto
+    line-height: 1.4166666666666667
+    margin: 0 -50px
+.Cv
+  background-color: $green
+  text-align: center
+  padding: 28px
+  &__btn
+    box-sizing: border-box
+    background: $white
+    font-size: 27px
+    padding: 24px
+    display: block
+    font-weight: bold
+    color: $green
+    text-decoration: none
+    position: relative
+    width: 830px
+    margin: 0 auto
+    transition: .4s
+    &:hover
+      background-color: yellow
+      &::after
+        right: 18px
+    &::after
+      content: ''
+      display: block
+      width: 16px
+      height: 16px
+      position: absolute
+      right: 28px
+      top: 0
+      bottom: 0
+      margin: auto
+      transition: .4s
+      background:
+        image: url("../img/arrow-btn.svg")
+        repeat: none
+        size: 16px 16px
+        position: center
+
+.Point
+  margin: 100px 0
+  &__ttl
+    font-size: 29px
+    font-weight: bold
+    color: $green
+    text-align: center
+    padding-bottom: 20px
+    border-bottom: 3px solid
+    width: 90%
+    margin: 0 auto 40px
+  &__bnr
+    text-align: center
+.Point6
+  margin: 100px 0 auto
+  &__content
+    margin-bottom: 50px
+  &__ttl
+    line-height: 1.3333333333333333
+    font-size: 24px
+    color: $green
+    font-weight: bold
+    position: relative
+    z-index: 1
+    padding-left: 76px
+    padding-top: 44px
+    margin-bottom: 28px
+    &1
+      &::before
+        background-image: url("../img/point1.svg")
+    &2
+      &::before
+        background-image: url("../img/point2.svg")
+    &3
+      &::before
+        background-image: url("../img/point3.svg")
+    &4
+      &::before
+        background-image: url("../img/point4.svg")
+    &5
+      &::before
+        background-image: url("../img/point5.svg")
+    &6
+      &::before
+        background-image: url("../img/point6.svg")
+    &::before
+      width: 83px
+      height: 83px
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      z-index: -2
+      background:
+        size: 83px 83px
+        position: left top
+        repeat: no-repeat
+    &::after
+      width: 47px
+      height: 72px
+      background-color: $white
+      content: ''
+      display: block
+      position: absolute
+      left: 65px
+      top: 34px
+      z-index: -1
+  &__flex
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &-text
+      width: 70%
+      p
+        line-height: 1.6
+      line-height: 1.6
+      font-size: 15px
+    &-img
+      text-align: center
+      width: 30%
+  &__inner-Merit
+    width: 84%
+    margin: 0 auto
+  &__flex-text-li
+    position: relative
+    padding-left: 20px
+    &::before
+      position: absolute
+      content: '※'
+      left: 0
+      top: 0
+.Merit
+  margin: 54px 0 70px
+  &__flex
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    margin-bottom: 40px
+    &-img
+      img
+        width: 90px
+        height: 90px
+    &-text
+      margin-left: 28px
+      color: $black
+  &__ttl
+    line-height: 1.368421052631579
+    font-weight: bold
+    font-size: 19px
+    margin-bottom: 10px
+  &__text
+    font-size: 17px
+    line-height: 1.5294117647058822
+
+.Attention
+  &__ttl
+    margin-bottom: 20px
+    font-size: 17px
+  &__li
+    font-size: 14px
+    line-height: 1.5714285714285714
+    position: relative
+    padding-left: 20px
+    &::before
+      position: absolute
+      content: '※'
+      left: 0
+      top: 0
+  &__ul
+    margin-bottom: 30px
+.Contact-credit,
+.Contact-marujan
+  &__ttl,
+  &__tel,
+  &__li
+    font-size: 14px
+    line-height: 1.5714285714285714
+.Contact-credit,
+.Contact-marujan
+  &__li
+    position: relative
+    padding-left: 20px
+    &::before
+      position: absolute
+      content: '・'
+      left: 0
+      top: 0
+
+.Contact-credit
+  &__ul
+    margin-bottom: 30px
+
+.Footer
+  background-color: $gray_footer
+  padding: 20px 0
+  &__flex
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+  &__copy
+    font-size: 12px
+
+.pc-block
+  display: block
+.pc-ib
+  display: inline-block
+.pc-flex
+  display: -webkit-flex
+  display: -ms-flex
+  display: flex
+.pc-none
   display: none
 
-@import pc
+@import sp
